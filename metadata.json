@@ -1,0 +1,10 @@
+{
+  "name": "SeismoAlert - Real-Time Global Earthquake Monitor",
+  "description": "Global real-time earthquake tracking, interactive location-based seismic mapping, proximity wave alerts, and USGS telemetry feed.",
+  "requestFramePermissions": [
+    "geolocation"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

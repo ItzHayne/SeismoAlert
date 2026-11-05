@@ -1,0 +1,78 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+  
+  .font-mono, [data-mono] {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+/* Custom leaflet map controls styling */
+.leaflet-container {
+  background-color: #030712 !important;
+  font-family: inherit;
+}
+
+.leaflet-popup-content-wrapper {
+  background: #0f172a !important;
+  color: #f1f5f9 !important;
+  border: 1px solid #334155 !important;
+  border-radius: 8px !important;
+  padding: 0 !important;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.6) !important;
+}
+
+.leaflet-popup-content {
+  margin: 0 !important;
+  line-height: 1.4 !important;
+}
+
+.leaflet-popup-tip {
+  background: #0f172a !important;
+}
+
+.leaflet-control-zoom a {
+  background-color: #0f172a !important;
+  color: #94a3b8 !important;
+  border-color: #334155 !important;
+}
+
+.leaflet-control-zoom a:hover {
+  background-color: #1e293b !important;
+  color: #38bdf8 !important;
+}
+
+.leaflet-control-attribution {
+  background: rgba(15, 23, 42, 0.8) !important;
+  color: #64748b !important;
+  font-size: 10px !important;
+}
+
+.leaflet-control-attribution a {
+  color: #94a3b8 !important;
+}
+
+/* Keyframes for seismic wave ripples */
+@keyframes seismic-pulse {
+  0% {
+    transform: scale(0.6);
+    opacity: 0.9;
+  }
+  70% {
+    transform: scale(2.2);
+    opacity: 0.2;
+  }
+  100% {
+    transform: scale(3.0);
+    opacity: 0;
+  }
+}
+
+.seismic-wave-anim {
+  animation: seismic-pulse 2.2s cubic-bezier(0.2, 0.8, 0.2, 1) infinite;
+  transform-origin: center;
+}
